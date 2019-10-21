@@ -11,6 +11,6 @@ namespace :travis do
   end
 
   task brakeman: :environment do
-    Bundler.clean_exec('brakeman bundle exec brakeman --no-pager --exit-on-error')
+    Bundler.clean_exec('brakeman --no-pager --exit-on-error')
   end
 end

@@ -34,8 +34,15 @@ gem 'versionist', '~> 2.0.1'
 # Handle templates
 gem 'slim', '~> 4.0.1'
 
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+# Workers
+gem 'sidekiq', '~> 6.0.2'
+
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS),
+# making cross-origin AJAX possible
+gem 'rack-cors', '~> 1.0.3'
+
+# DDoS protection
+gem 'rack-attack', '~> 6.0.0'
 
 group :development, :test do
   gem 'dotenv-rails', '~> 2.7.5'
