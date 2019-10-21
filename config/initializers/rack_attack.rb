@@ -1,7 +1,7 @@
 class Rack::Attack
   Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
 
-  throttle('req/ip', limit: Rails.application.secrets.max_requests_per_second, period: 1.second, limit: 5) do |req|
+  throttle('req/ip', limit: Rails.application.secrets.max_requests_per_second, period: 1.second) do |req|
     req.ip unless req.path.start_with?('/assets')
   end
 
